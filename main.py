@@ -42,14 +42,13 @@ chooseFileButton = Button(root, text="Choose file", font="Times_New_Roman 18 bol
 runObjectTracking = Button(root, text="Run Object Tracking", font="Times_New_Roman 18 bold",
                            command=startObjectTracking).place(x=470, y=250)
 
-closeAppButton = Button(root, text="Close app", font="Times_New_Roman 18 bold").place(
+closeAppButton = Button(root, text="Close app", font="Times_New_Roman 18 bold", command=root.destroy).place(
     x=900, y=250)
 
 currentPathText = Label(root, text="File path: " + filepath, font="Helvetica 18 bold")
 
 currentPathText.place(x=100, y=125)
 
-infoLabelText = Label(root, text = " Press ESC to close the player ").pack(side = tkinter.BOTTOM)
-
+infoLabelText = Label(root, text=" Press ESC to close the player ").pack(side=tkinter.BOTTOM)
 
 root.mainloop()
