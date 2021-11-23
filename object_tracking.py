@@ -80,8 +80,11 @@ def object_tracking(video):
         # Make a copy of the points
         center_points_prev_frame = center_points_cur_frame.copy()
 
-        key = cv2.waitKey(0)
+        key = cv2.waitKey(2)
+        print(key)
         if key == 27:
+            cap.release()
+            cv2.destroyAllWindows()
             break
 
     cap.release()
